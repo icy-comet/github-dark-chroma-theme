@@ -2,20 +2,24 @@
 █▀▀ █ ▀█▀ █░█ █░█ █▄▄   █▀▄ ▄▀█ █▀█ █▄▀
 █▄█ █ ░█░ █▀█ █▄█ █▄█   █▄▀ █▀█ █▀▄ █░█
 </pre>
-🌙 A simple plug-and-play Chroma theme based on GitHub's Dark color scheme!
+
+🌙 A simple Chroma theme based on GitHub's Dark color scheme!
+
+No more client-side highlighting for for a better dark highlighting theme with Hugo!
 
 Feel free to open a Issue/PR for improvements!
 
 # Installation 🛠️
-- Head over to the Releases page, and download the lastest `highlight.css` release.
+- Head over to the [Releases](https://github.com/cryptic-code/github-dark-chroma-theme/releases) page, and download the lastest `highlight.css.zip`.
 - Turn `makrup.highlight.noClasses` to `false` in your Hugo config.
-- Then simply include the downloaded stylesheet in your head partial to make it available on all pages.
+- Then simply include the downloaded stylesheet in your layouts like a `head` partial to make it available on all pages.
 
 OR
 
 - Clone the repo.
 - Install the dependencies.
 - Run `npm run build`. It will output `highlight.css` in the current directory.
+- Follow the rest of the above instructions.
 
 Note: Anyone is welcome to port it directly into Chroma! I am not yet proficient with Go to open a PR with a theme that automatically updates with Primer styles.
 
