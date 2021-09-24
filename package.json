@@ -1,0 +1,22 @@
+{
+  "name": "github-dark-chroma-theme",
+  "version": "0.1.0",
+  "description": "A simple plug-and-play Chroma theme based on GitHub's Dark color scheme!",
+  "main": "index.js",
+  "scripts": {
+    "build": "node index.js"
+  },
+  "keywords": [
+    "chroma",
+    "hugo",
+    "theme",
+    "github-dark"
+  ],
+  "author": "Aniket Teredesai",
+  "license": "MIT",
+  "devDependencies": {
+    "@primer/primitives": "^4.8.1",
+    "jss": "^10.8.0",
+    "jss-preset-default": "^10.8.0"
+  }
+}
