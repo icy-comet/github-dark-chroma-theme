@@ -39,6 +39,7 @@ const styles = {
     "& .lnt": {
       marginRight: "0.4em",
       padding: "0 0.4em 0 0.4em",
+      fontSize: "0.875rem",
       color: colors.codemirror.linenumberText,
     },
     // LineNumbers
