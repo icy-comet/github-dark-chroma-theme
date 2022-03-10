@@ -5,7 +5,9 @@
 
 🌙 A simple Chroma theme based on GitHub's Dark color scheme!
 
-No more client-side highlighting for for a better dark highlighting theme with Hugo!
+No more client-side JS-based highlighting for a better dark highlighting theme with Hugo!
+
+Check it out on my site @[aniketteredesai.com](https://aniketteredesai.com)
 
 Feel free to open a Issue/PR for improvements!
 
