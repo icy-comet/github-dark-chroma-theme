@@ -15,8 +15,8 @@
   "author": "Aniket Teredesai",
   "license": "MIT",
   "devDependencies": {
-    "@primer/primitives": "^4.8.1",
-    "jss": "^10.8.0",
-    "jss-preset-default": "^10.8.0"
+    "@primer/primitives": "^7.5.1",
+    "jss": "^10.9.0",
+    "jss-preset-default": "^10.9.0"
   }
 }
