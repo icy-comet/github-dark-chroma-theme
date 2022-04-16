@@ -13,7 +13,7 @@ Feel free to open a Issue/PR for improvements!
 
 # Installation 🛠️
 - Head over to the [Releases](https://github.com/cryptic-code/github-dark-chroma-theme/releases) page, and download the lastest `highlight.css.zip`.
-- Turn `makrup.highlight.noClasses` to `false` in your Hugo config.
+- Turn `markup.highlight.noClasses` to `false` in your Hugo config.
 - Then simply include the downloaded stylesheet in your layouts like a `head` partial to make it available on all pages.
 
 OR
