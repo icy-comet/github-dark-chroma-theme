@@ -4,7 +4,7 @@
   "description": "A simple plug-and-play Chroma theme based on GitHub's Dark color scheme!",
   "main": "index.js",
   "scripts": {
-    "build": "node index.js"
+    "build": "node src/index.js"
   },
   "keywords": [
     "chroma",
