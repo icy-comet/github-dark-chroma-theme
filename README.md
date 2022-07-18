@@ -11,22 +11,23 @@ Check it out on my site @[anikett.com](https://anikett.com)
 
 Feel free to open a Issue/PR for improvements!
 
-# Installation 🛠️
-- Head over to the [Releases](https://github.com/cryptic-code/github-dark-chroma-theme/releases) page, and download the lastest `highlight.css.zip`.
+# Build 🏗️
+- Run `npm run build` inside project's root directory.
+- You could also run `npm update -S` before running the build to use the latest GH styles.
+- Look for `dist/gh-dark-chroma.css` after successful build.
+
+# Use with Hugo 🛠️
+- Head over to the [Releases](https://github.com/cryptic-code/github-dark-chroma-theme/releases) page, and download the lastest `gh-dark-chroma.css.zip`.
 - Turn `markup.highlight.noClasses` to `false` in your Hugo config.
-- Then simply include the downloaded stylesheet in your layouts like a `head` partial to make it available on all pages.
+- Then simply include the downloaded stylesheet in your layouts, e.g. in a `head` partial to make it available on all pages.
 
-OR
-
-- Clone the repo.
-- Install the dependencies.
-- Run `npm run build`. It will output `highlight.css` in the current directory.
-- Follow the rest of the above instructions.
-
-Note: Anyone is welcome to port it directly into Chroma! I am not yet proficient with Go to open a PR with a theme that automatically updates with Primer styles.
+# Use with chroma CLI ⌨️
+- Specify the output format as `html` when invoking `chroma` with `chroma -f html`.
+- Clear out the styles from the generated output, i.e. delete everything in between the opening and closing `<style>` tags.
+- Then just copy and paste the contents of `dist/gh-dark-chroma.css` in the cleared space.
 
 # CSS Reference 📙
-To create a sample reference stylesheet, run:
+To create a reference stylesheet of classes, run:
 ```
 hugo gen chromastyles --style=monokai > sample.css
 ```
