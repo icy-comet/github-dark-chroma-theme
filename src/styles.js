@@ -154,7 +154,7 @@ const styles = {
     },
     // NameNamespace
     // e.g. import paths in Python/Go
-    "& .nm": {
+    "& .nn": {
       color: colors.scale.red[3],
     },
     // NameProperty
