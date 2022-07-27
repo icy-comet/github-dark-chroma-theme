@@ -8,17 +8,22 @@ const colors = require("@primer/primitives/dist/json/colors/dark.json");
 
 const styles = {
   chroma: {
-    // Background
+    // Default Foreground
+    color: colors.fg.default,
+    // Default Background
     backgroundColor: colors.canvas.default,
+
     // Error
     "& .err": {
       color: colors.danger.fg,
     },
-    // Punctuation
-    // e.g. `[`, `(`, `...`
-    "& .p": {
-      color: colors.fg.default,
-    },
+
+    // // Punctuation
+    // // e.g. `[`, `(`, `...`
+    // "& .p": {
+    //   color: colors.fg.default,
+    // },
+
     // LineTableTD
     "& .lntd": {
       verticalAlign: "top",
@@ -55,6 +60,7 @@ const styles = {
       padding: "0 0.4em 0 0.4em",
       color: colors.scale.gray[4],
     },
+
     // Keyword
     "& .k": {
       color: colors.scale.red[3],
@@ -63,55 +69,39 @@ const styles = {
     // words like `None` in newer Python
     "& .kc": {
       color: colors.scale.blue[2],
-      fontWeight: "bold",
     },
+    // KeywordPseudo
+    // words like `None` in older Python
+    "& .kp": {
+      color: colors.scale.blue[2],
+    },
+
+    // Inherited from Keyword ↓
+    // ========================
+
     // KeyWordDeclaration
     // words like `var` in Go, JS
     "& .kd": {
       color: colors.scale.red[3],
-      fontWeight: "bold",
     },
     // KeywordNamespace
     // words like `import` in Python, Go
     "& .kn": {
       // could also be orange[3] — vs code distinguishes between packages and namespaces
       color: colors.scale.red[3],
-      fontWeight: "bold",
-    },
-    // KeywordPseudo
-    // words like `None` in older Python
-    "& .kp": {
-      color: colors.scale.red[3],
-      fontWeight: "bold",
     },
     // KeywordReserved
     "& .kr": {
       color: colors.scale.red[3],
-      fontWeight: "bold",
     },
     // KeywordType
     // for built-in types: int,char
     "& .kt": {
       color: colors.scale.red[3],
-      fontWeight: "bold",
     },
+
     // Name
     "& .n": {
-      color: colors.fg.default,
-    },
-    // NameAttribute
-    // e.g. attrs of HTML tags
-    "& .na": {
-      color: colors.fg.default,
-    },
-    // NameBuiltin
-    // words available in the global namespace
-    "& .nb": {
-      color: colors.fg.default,
-    },
-    // NameBuiltinPseudo
-    // words like `self` in Ruby, `this` in Java
-    "& .bp": {
       color: colors.fg.default,
     },
     // NameClass
@@ -149,6 +139,7 @@ const styles = {
       color: colors.scale.purple[2],
       fontWeight: "bold",
     },
+    // Inhertis form `Name.Function`
     // NameFunctionMagic
     // e.g. `__init__` in Python
     "& .fm": {
@@ -166,11 +157,6 @@ const styles = {
     "& .nm": {
       color: colors.scale.red[3],
     },
-    // NameOther
-    // normally unused but gets used with langs like JS for all the names (a lexer issue?)
-    // "& .nx": {
-    //   color: colors.scale.blue[2],
-    // },
     // NameProperty
     // occasionally used for class attrs
     "& .py": {
@@ -186,6 +172,10 @@ const styles = {
     "& .nv": {
       color: colors.scale.blue[2],
     },
+
+    // Inherit from `Name.Variable` ↓
+    // ===============================
+
     // NameVariableClass
     // class variables
     "& .vc": {
@@ -206,6 +196,31 @@ const styles = {
     "& .vm": {
       color: colors.scale.blue[2],
     },
+
+    // Inhertit from `Name` ↓
+    // ========================
+
+    // // NameAttribute
+    // // e.g. attrs of HTML tags
+    // "& .na": {
+    //   color: colors.fg.default,
+    // },
+    // // NameBuiltin
+    // // words available in the global namespace
+    // "& .nb": {
+    //   color: colors.fg.default,
+    // },
+    // // NameBuiltinPseudo
+    // // words like `self` in Ruby, `this` in Java
+    // "& .bp": {
+    //   color: colors.fg.default,
+    // },
+    // // NameOther
+    // // normally unused but gets used with langs like JS for all the names (a lexer issue?)
+    // "& .nx": {
+    //   color: colors.scale.blue[2],
+    // },
+
     // Literal
     // match any literal
     "& .l": {
@@ -216,6 +231,35 @@ const styles = {
     "& .ld": {
       color: colors.scale.blue[2],
     },
+    // LiteralStringAffix
+    // e.g. `r` in `r"cool"`
+    "& .sa": {
+      color: colors.scale.blue[2],
+    },
+    // LiteralStringDelimiter
+    // e.g. the word END in Perl
+    "& .dl": {
+      color: colors.scale.blue[2],
+    },
+    // LiteralStringEscape
+    // escape sequence in literal string
+    "& .se": {
+      color: colors.scale.blue[2],
+    },
+    // LiteralStringHeredoc
+    // heredoc strings in Ruby/Perl
+    "& .sh": {
+      color: colors.scale.blue[2],
+    },
+    // LiteralStringRegex
+    // e.g. `/foo/` in JavaScript
+    "& .sr": {
+      color: colors.scale.blue[2],
+    },
+
+    // Inherit from `Literal` ↓
+    // ========================
+
     // LiteralString
     "& .s": {
       color: colors.scale.blue[1],
@@ -240,30 +284,10 @@ const styles = {
     "& .sc": {
       color: colors.scale.blue[1],
     },
-    // LiteralStringAffix
-    // e.g. `r` in `r"cool"`
-    "& .sa": {
-      color: colors.scale.blue[2],
-    },
-    // LiteralStringDelimiter
-    // e.g. the word END in Perl
-    "& .dl": {
-      color: colors.scale.blue[2],
-    },
     // LiteralStringDoc
     // e.g. doc strings in Python
     "& .sd": {
       color: colors.scale.blue[1],
-    },
-    // LiteralStringEscape
-    // escape sequence in literal string
-    "& .se": {
-      color: colors.scale.blue[2],
-    },
-    // LiteralStringHeredoc
-    // heredoc strings in Ruby/Perl
-    "& .sh": {
-      color: colors.scale.blue[2],
     },
     // LiteralStringInterpol
     // e.g. #{foo} in Ruby
@@ -274,11 +298,6 @@ const styles = {
     // e.g. `%q{foo}` string constructs in Ruby
     "& .sx": {
       color: colors.scale.blue[1],
-    },
-    // LiteralStringRegex
-    // e.g. `/foo/` in JavaScript
-    "& .sr": {
-      color: colors.scale.blue[2],
     },
     // LiteralStringSymbol
     // e.g. `:foo` in LISP
@@ -303,7 +322,7 @@ const styles = {
     // LiteralNumberHex
     // match hex literals e.g. e.g. `0xdeadbeef`
     "& .mh": {
-      color: colors.scale.blue[2],
+      color: colors.scale.blue[1],
     },
     // LiteralNumberInteger
     // match integer literals
@@ -313,30 +332,50 @@ const styles = {
     // LiteralNumberIntegerLong
     // e.g. 42L in Python
     "& .il": {
-      color: colors.scale.blue[2],
+      color: colors.scale.blue[1],
     },
     // LiteralNumberOct
     // match octal literals
     "& .mo": {
       color: colors.scale.blue[1],
     },
+
     // Operator
     // e.g. +, -
     "& .o": {
       color: colors.scale.red[3],
       fontWeight: "bold",
     },
+    // Inherits Operator
     // OperatorWord
     // e.g. `not` in Python
     "& .ow": {
       color: colors.scale.blue[3],
       fontWeight: "bold",
     },
+
     // Comment
     "& .c": {
       color: colors.scale.gray[3],
       fontStyle: "italic",
     },
+    // CommentPreprocFile
+    // match filenames in preprocessor comments, such as include files in C/C++
+    "& .cpf": {
+      color: colors.scale.gray[3],
+      fontWeight: "bold",
+    },
+    // Comment Special
+    // e.g. author and license information
+    "& .cs": {
+      color: colors.scale.gray[3],
+      fontStyle: "italic",
+      fontWeight: "bold",
+    },
+
+    // Inherit from `Comment`
+    // =====================
+
     // CommentHashbang
     // match hashbang lines
     "& .ch": {
@@ -353,17 +392,11 @@ const styles = {
       color: colors.scale.gray[3],
       fontStyle: "italic",
     },
-    // Comment Special
-    // e.g. author and license information
-    "& .cs": {
-      color: colors.scale.gray[3],
-      fontStyle: "italic",
-    },
-    // CommentPreprocFile
-    // match filenames in preprocessor comments, such as include files in C/C++
-    "& .cpf": {
-      color: colors.scale.gray[3],
-      fontStyle: "italic",
+
+    // Generic
+    // not used generally
+    "& .g": {
+      color: colors.fg.default,
     },
     // GenericDeleted
     "& .gd": {
@@ -372,7 +405,6 @@ const styles = {
     },
     // GenericEmph
     "& .ge": {
-      color: colors.fg.default,
       fontStyle: "italic",
     },
     // GenericError
@@ -382,11 +414,12 @@ const styles = {
     // GenericHeading
     "& .gh": {
       color: colors.scale.blue[2],
+      fontWeight: "bold",
     },
     // GenericInserted
     "& .gi": {
-      color: colors.scale.green[1],
-      backgroundColor: colors.scale.green[2],
+      color: colors.scale.green[2],
+      backgroundColor: colors.scale.green[7],
     },
     // GenericOutput
     "& .go": {
@@ -406,20 +439,18 @@ const styles = {
     },
     // GenericTraceback
     "& .gt": {
-      color: colors.scale.red[2],
+      color: colors.scale.red[3],
     },
     // GenericUnderline
     "& .gl": {
       textDecoration: "underline",
     },
+
     // TextWhiteSpace
     "& .w": {
       color: colors.fg.subtle,
     },
 
-    // Generic
-    // not used generally
-    "& .g": {},
     // Other
     // special token for data not matched by a parser (e.g. HTML markup in PHP code)
     "& .x": {
