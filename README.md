@@ -7,9 +7,9 @@
 
 No more client-side JS-based highlighting for a better dark highlighting theme with Hugo!
 
-Check it out on my site @[anikett.com](https://anikett.com)
-
 Feel free to open a Issue/PR for improvements!
+
+<img src="sample.png" alt="sample screenshot">
 
 # Build 🏗️
 - Run `npm run build` inside project's root directory.
