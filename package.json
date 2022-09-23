@@ -17,6 +17,6 @@
   "devDependencies": {
     "@primer/primitives": "^7.9.0",
     "jss": "^10.9.0",
-    "jss-preset-default": "^10.9.1"
+    "jss-preset-default": "^10.9.2"
   }
 }
