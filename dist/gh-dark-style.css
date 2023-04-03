@@ -1,5 +1,5 @@
 .chroma {
-  color: #c9d1d9;
+  color: #e6edf3;
   background-color: #0d1117;
 }
 .chroma .err {
@@ -58,7 +58,7 @@
   color: #ff7b72;
 }
 .chroma .n {
-  color: #c9d1d9;
+  color: #e6edf3;
 }
 .chroma .nc {
   color: #f0883e;
@@ -218,7 +218,7 @@
   font-style: italic;
 }
 .chroma .g {
-  color: #c9d1d9;
+  color: #e6edf3;
 }
 .chroma .gd {
   color: #ffa198;
@@ -260,5 +260,5 @@
   color: #6e7681;
 }
 .chroma .x {
-  color: #c9d1d9;
+  color: #e6edf3;
 }
